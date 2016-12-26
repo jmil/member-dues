@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://stripe.com/docs/checkout/rails -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <meta name="google-site-verification" content="f0LCrdI6z4Fo8zld4sHCgo5SiUE4EYYRUa6KVeX3Mw8">
+    <meta name="csrf-token" content="techfpwkjGXzm7AQNxr8JylZ8U5zVvdGkoCA-oulJ3CPASqMls3703AYomFDNDWF67rcFMrLgcZ4vPB5wDLpSA==">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Rails Checkout Guide</title>
+
+    <meta name="description" content="Stripe is a suite of APIs that powers commerce for businesses of all sizes.">
+
+
+    <link rel="shortcut icon" href="https://stripe.com/favicon.ico">
+
+    <link rel="apple-touch-icon-precomposed" href="https://stripe.com/img/apple-touch-icon/180x180.png">
+    <link rel="icon" href="https://stripe.com/img/apple-touch-icon/180x180.png">
+
+
+    <link rel="image_src" type="image/png" href="https://stripe.com/img/v3/home/social.png">
+
+    <meta property="og:title" content="Rails Checkout Guide">
+    <meta property="og:url" content="https://stripe.com/docs/checkout/rails">
+    <meta property="og:description" content="Stripe is a suite of APIs that powers commerce for businesses of all sizes.">
+    <meta property="og:image" content="https://stripe.com/img/v3/home/social.png">
+
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:image" content="https://stripe.com/img/v3/home/twitter.png">
+    <meta name="twitter:site" content="@stripe">
+    <meta name="twitter:title" content="Rails Checkout Guide">
+    <meta name="twitter:description" content="Stripe is a suite of APIs that powers commerce for businesses of all sizes.">
+
+
+    <script type="application/json" id="strut_files">{&quot;v3/shared/navigation_ie10.css&quot;:&quot;/assets/v3/shared/navigation_ie10-ec238f46e7cb9867e3c1b529e2cfa37b.css&quot;}</script>
+
+    
+
+    
+
+    <link rel="stylesheet" href="./Rails Checkout Guide_files/default-d7a1ded5b583066b1fbc9e39bdd9a746.css">
+    <link rel="stylesheet" href="./Rails Checkout Guide_files/common-d0fb03fa2d48fcf29010779ca9a12b2c.css">
+    <link rel="stylesheet" href="./Rails Checkout Guide_files/base-94455b8a349cb7e99f8f3fa65b67fac7.css">
+    <link rel="stylesheet" href="./Rails Checkout Guide_files/prism_light-6d08c6ec0d72453693d775c3b96629c0.css">
+    
+    
+    <meta name="viewport" content="width=1060">
+    <meta name="robots" content="noarchive">
+  </head>
+  <body class="">
+    
+    <div id="docs">
+      <div id="sidebar">
+        <div class="logo">
+          <a class="site" href="https://stripe.com/" title="Stripe"></a>
+          <a class="extension" href="https://stripe.com/docs">docs</a>
+        </div>
+        <div class="nav-border"></div>
+        <nav>
+          <h1 class="home"><a href="https://stripe.com/docs">Home</a></h1>
+          <h1 class="payments"><a class="toggle-content" data-trigger-id="0">Payments</a></h1>
+<ul class="hidden" data-hidden="true" data-height="604" style="opacity: 0; height: 0px;">
+    <li>
+      <a href="https://stripe.com/docs/quickstart">Quickstart</a>
+    </li>
+    <li class="category">Collecting payment details
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/checkout/tutorial" data-trigger-id="7">Checkout</a>
+      <ul class="hidden" data-hidden="true" data-height="28" style="opacity: 0; height: 0px;">
+    <li>
+      <a href="https://stripe.com/docs/checkout">Reference</a>
+    </li>
+</ul>
+
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/custom-form" data-trigger-id="8">Stripe.js</a>
+      <ul class="hidden" data-hidden="true" data-height="28" style="opacity: 0; height: 0px;">
+    <li>
+      <a href="https://stripe.com/docs/stripe.js">Reference</a>
+    </li>
+</ul>
+
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/mobile/ios">iOS</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/mobile/android">Android</a>
+    </li>
+    <li class="category">Charges
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/charges">Creating Charges</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/declines">Declines &amp; Failed Payments</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/disputes" data-trigger-id="9">Disputes</a>
+      <ul class="hidden" data-hidden="true" data-height="84" style="opacity: 0; height: 0px;">
+    <li>
+      <a href="https://stripe.com/docs/disputes/evidence">Submitting Evidence</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/disputes/types">Types</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/disputes/faq">FAQ</a>
+    </li>
+</ul>
+
+    </li>
+    <li class="category">Products &amp; Orders
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/orders" data-trigger-id="10">Orders</a>
+      <ul class="hidden" data-hidden="true" data-height="28" style="opacity: 0; height: 0px;">
+    <li>
+      <a href="https://stripe.com/docs/orders/guide">Guide</a>
+    </li>
+</ul>
+
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/orders/tax-integration">Tax Integrations</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/orders/shipping-integration">Shipping Integrations</a>
+    </li>
+    <li class="category">Other Payment Methods
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/ach">ACH</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/apple-pay" data-trigger-id="11">Apple Pay</a>
+      <ul class="hidden" data-hidden="true" data-height="56" style="opacity: 0; height: 0px;">
+    <li>
+      <a href="https://stripe.com/docs/apple-pay/apps">Apple Pay in Apps</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/apple-pay/web">Apple Pay on the Web</a>
+    </li>
+</ul>
+
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/alipay">Alipay</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/bitcoin">Bitcoin</a>
+    </li>
+    <li class="separator">
+      <a href="https://stripe.com/docs/testing">Testing</a>
+    </li>
+</ul>
+
+          <h1 class="subscriptions"><a class="toggle-content" data-trigger-id="1">Subscriptions</a></h1>
+<ul class="hidden" data-hidden="true" data-height="458" style="opacity: 0; height: 0px;">
+    <li>
+      <a href="https://stripe.com/docs/subscriptions/quickstart">Quickstart</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/subscriptions/creating" data-trigger-id="12">Creating Subscriptions</a>
+      <ul data-collapsable="false" data-height="140">
+    <li>
+      <a href="https://stripe.com/docs/subscriptions/discounts">Applying Discounts</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/subscriptions/trials">Using Trial Periods</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/subscriptions/quantities">Setting Quantities</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/subscriptions/taxes">Adding Taxes</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/subscriptions/multiple">Multiple Subscriptions</a>
+    </li>
+</ul>
+
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/subscriptions/lifecycle">Lifecycle &amp; Events</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/subscriptions/webhooks">Using Webhooks</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/subscriptions/changing" data-trigger-id="13">Changing Subscriptions</a>
+      <ul data-collapsable="false" data-height="84">
+    <li>
+      <a href="https://stripe.com/docs/subscriptions/upgrading-downgrading">Upgrading &amp; Downgrading</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/subscriptions/billing-cycle">Billing Cycle</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/subscriptions/canceling-pausing">Canceling &amp; Pausing</a>
+    </li>
+</ul>
+
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/subscriptions/invoices" data-trigger-id="14">Working with Invoices</a>
+      <ul data-collapsable="false" data-height="0">
+</ul>
+
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/subscriptions/plans">Managing Plans</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/subscriptions/testing">Testing</a>
+    </li>
+</ul>
+
+          <h1 class="connect"><a class="toggle-content" data-trigger-id="2">Connect</a></h1>
+<ul class="hidden" data-hidden="true" data-height="472" style="opacity: 0; height: 0px;">
+    <li>
+      <a href="https://stripe.com/docs/connect">Overview</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/connect/connecting-to-accounts" data-trigger-id="15">Connecting to Accounts</a>
+      <ul data-collapsable="false" data-height="28">
+    <li>
+      <a href="https://stripe.com/docs/connect/authentication">Authentication</a>
+    </li>
+</ul>
+
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/connect/standalone-accounts" data-trigger-id="16">Standalone Accounts</a>
+      <ul data-collapsable="false" data-height="28">
+    <li>
+      <a href="https://stripe.com/docs/connect/reference">OAuth Reference</a>
+    </li>
+</ul>
+
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/connect/managed-accounts" data-trigger-id="17">Managed Accounts</a>
+      <ul data-collapsable="false" data-height="196">
+    <li>
+      <a href="https://stripe.com/docs/connect/updating-accounts">Updating Accounts</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/connect/identity-verification">Identity Verification</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/connect/required-verification-information">Verification Fields</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/connect/testing-verification">Testing Verification</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/connect/bank-transfers">Bank Transfers</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/connect/migrating">Migrating Recipients</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/connect/best-practices">Best Practices</a>
+    </li>
+</ul>
+
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/connect/payments-fees">Payments and Fees</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/connect/special-case-transfers">Special-case Transfers</a>
+    </li>
+    <li class="separator">
+      <a href="https://stripe.com/docs/connect/testing">Testing</a>
+    </li>
+</ul>
+
+          <h1 class="relay"><a class="toggle-content" data-trigger-id="3">Relay</a></h1>
+<ul class="hidden" data-hidden="true" data-height="94" style="opacity: 0; height: 0px;">
+    <li>
+      <a href="https://stripe.com/docs/relay">Selling in Other Apps</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/relay/apps-guide" data-trigger-id="18">Accepting Orders in Your App</a>
+      <ul data-collapsable="false" data-height="28">
+    <li>
+      <a href="https://stripe.com/docs/relay/apps-error-guide">Error Handling</a>
+    </li>
+</ul>
+
+    </li>
+</ul>
+
+          <h1 class="radar"><a class="toggle-content" data-trigger-id="4">Radar</a></h1>
+<ul class="hidden" data-hidden="true" data-height="220" style="opacity: 0; height: 0px;">
+    <li>
+      <a href="https://stripe.com/docs/radar">Overview</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/radar/risk-evaluation">Risk Evaluation</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/radar/review" data-trigger-id="19">Review</a>
+      <ul data-collapsable="false" data-height="28">
+    <li>
+      <a href="https://stripe.com/docs/radar/review/auth-and-capture">Uncaptured Payments</a>
+    </li>
+</ul>
+
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/radar/rules" data-trigger-id="20">Rules</a>
+      <ul data-collapsable="false" data-height="28">
+    <li>
+      <a href="https://stripe.com/docs/radar/rules/reference">Reference</a>
+    </li>
+</ul>
+
+    </li>
+    <li class="separator">
+      <a href="https://stripe.com/docs/radar/testing">Testing</a>
+    </li>
+</ul>
+
+          <h1 class="account"><a class="toggle-content" data-trigger-id="5">Account</a></h1>
+<ul class="hidden" data-hidden="true" data-height="122" style="opacity: 0; height: 0px;">
+    <li>
+      <a href="https://stripe.com/docs/dashboard">Your Account</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/checklist">Going Live Checklist</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/transfers">Getting Paid</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/reporting">Reporting</a>
+    </li>
+</ul>
+
+          <h1 class="api"><a class="toggle-content" data-trigger-id="6">Development</a></h1>
+<ul class="hidden" data-hidden="true" data-height="178" style="opacity: 0; height: 0px;">
+    <li>
+      <a href="https://stripe.com/docs/libraries">API Libraries</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/upgrades">API Upgrades</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/webhooks">Webhooks</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/building-integrations">Integrations</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/recipes">Recipes</a>
+    </li>
+    <li>
+      <a href="https://stripe.com/docs/security">Security</a>
+    </li>
+</ul>
+
+
+          <h1 class="references"><a href="https://stripe.com/docs/api" class="external" target="_blank">API Reference</a></h1>
+        </nav>
+      </div>
+      <div id="content-wrapper" tabindex="0">
+        <header id="main-header">
+          <nav>
+            <ul class="external">
+              <li><a href="https://support.stripe.com/">Support</a></li>
+
+              <li class="button">
+                <a data-adroll-segment="submit_two" href="https://dashboard.stripe.com/login">Sign in</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <article id="content">
+          <header>
+  <h1>Using Checkout and Rails</h1>
+  <p>Get up and running with <a href="https://stripe.com/checkout">Checkout</a> and Ruby on Rails in no time at all! If you need help after reading this, check out our answers to <a href="https://support.stripe.com/search?q=checkout">common questions</a> or chat live with other developers in <a href="irc://irc.freenode.net/stripe">#stripe</a> on freenode.
+</p>
+<p>Stripe’s <a href="https://stripe.com/docs/checkout">Checkout</a> makes it easy to securely accept a customer’s credit card details. By directly sending card information from the customer’s browser to Stripe’s server, receiving a representative token in return, you can provide a seamless user experience without a heavy PCI compliance burden.</p></header>
+
+<section>
+<h2 id="getting-started">Getting started<a class="anchor" href="https://stripe.com/docs/checkout/rails#getting-started"></a></h2>
+
+<p>The first step is adding the Stripe gem to your application’s <strong>Gemfile</strong>:</p>
+<div class="code">
+  <pre class=" numbered  language-ruby"><code class="  language-ruby">gem <span class="token string">'stripe'</span></code><span class="line-numbers"><span></span></span><span class="line-numbers"><span></span></span></pre>
+</div>
+
+<p>Then, run <code>bundle install</code> to install the gem.</p>
+
+<p>Next, generate a new <code>Charges</code> controller:</p>
+<div class="code">
+  <nav class="nav-filename icon-terminal">
+    Terminal
+  </nav>
+  <pre class=" numbered  language-bash"><code class="  language-bash">rails g controller charges</code><span class="line-numbers"><span></span></span><span class="line-numbers"><span></span></span></pre>
+</div>
+
+<p>The controller does two things:</p>
+
+<ol>
+  <li>Shows a credit card form (using Checkout).</li>
+  <li>Creates the actual charges by calling our API.</li>
+</ol>
+
+<p>Add two actions to the controller:</p>
+<div class="code">
+  <pre class=" numbered  language-ruby"><code class="  language-ruby"><span class="token keyword">def</span> <span class="token keyword">new</span>
+<span class="token class-name">end</span>
+
+<span class="token keyword">def</span> create
+  <span class="token comment" spellcheck="true"># Amount in cents</span>
+  <span class="token variable">@amount</span> <span class="token operator">=</span> <span class="token number">500</span>
+
+  customer <span class="token operator">=</span> <span class="token constant">Stripe</span><span class="token punctuation">:</span><span class="token symbol">:Customer</span><span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>
+    <span class="token symbol">:email</span> <span class="token operator">=</span><span class="token operator">&gt;</span> params<span class="token punctuation">[</span><span class="token symbol">:stripeEmail</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token symbol">:source</span>  <span class="token operator">=</span><span class="token operator">&gt;</span> params<span class="token punctuation">[</span><span class="token symbol">:stripeToken</span><span class="token punctuation">]</span>
+  <span class="token punctuation">)</span>
+
+  charge <span class="token operator">=</span> <span class="token constant">Stripe</span><span class="token punctuation">:</span><span class="token symbol">:Charge</span><span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>
+    <span class="token symbol">:customer</span>    <span class="token operator">=</span><span class="token operator">&gt;</span> customer<span class="token punctuation">.</span><span class="token function">id</span><span class="token punctuation">,</span>
+    <span class="token symbol">:amount</span>      <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token variable">@amount</span><span class="token punctuation">,</span>
+    <span class="token symbol">:description</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">'Rails Stripe customer'</span><span class="token punctuation">,</span>
+    <span class="token symbol">:currency</span>    <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">'usd'</span>
+  <span class="token punctuation">)</span>
+
+<span class="token keyword">rescue</span> <span class="token constant">Stripe</span><span class="token punctuation">:</span><span class="token symbol">:CardError</span> <span class="token operator">=</span><span class="token operator">&gt;</span> e
+  flash<span class="token punctuation">[</span><span class="token symbol">:error</span><span class="token punctuation">]</span> <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">message</span>
+  redirect_to new_charge_path
+<span class="token keyword">end</span></code><span class="line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span class="line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre>
+</div>
+
+<p>The code first creates a <a href="https://stripe.com/docs/api#customer_object">Customer</a> object using two POST parameters. You can create a charge directly, but creating a customer first allows for repeat billing. The <code>:source</code> property is set to the <code>stripeToken</code> parameter, representing the payment method provided. The token is automatically created by Checkout.</p>
+
+<p>Stripe expects amounts to be in cents; since the charge is for $5, the <code>amount</code> parameter is assigned <strong>500</strong>. A <code>Charge</code> also takes an optional <code>:description</code> parameter, which can be anything meaningful to you. The customer ID is provided in the charge request, meaning the previously stored payment method will be charged.</p>
+
+<p>Some payment attempts fail for a variety of reasons, such as an invalid CVC, bad card number, or general decline. Any <code>Stripe::CardError</code> exception will be caught and stored in the <code>flash</code> hash.</p></section>
+
+<section>
+<h2 id="defining-the-route">Defining the route<a class="anchor" href="https://stripe.com/docs/checkout/rails#defining-the-route"></a></h2>
+
+<p>So users can access the newly created controller, add a route to it in <strong>config/routes.rb</strong>:</p>
+<div class="code">
+  <pre class=" numbered  language-ruby"><code class="  language-ruby">resources <span class="token symbol">:charges</span></code><span class="line-numbers"><span></span></span><span class="line-numbers"><span></span></span></pre>
+</div>
+</section>
+
+<section>
+<h2 id="configuring-the-application">Configuring the application<a class="anchor" href="https://stripe.com/docs/checkout/rails#configuring-the-application"></a></h2>
+
+<p>The application makes use of your publishable and secret API keys to interact with Stripe. An initializer is a good place to set these values, which will be provided when the application is started.</p>
+
+<p>Add the following to <strong>config/initializers/stripe.rb</strong>:</p>
+<div class="code">
+  <pre class=" numbered  language-ruby"><code class="  language-ruby"><span class="token constant">Rails</span><span class="token punctuation">.</span>configuration<span class="token punctuation">.</span><span class="token function">stripe</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token symbol">:publishable_key</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token constant">ENV</span><span class="token punctuation">[</span><span class="token string">'PUBLISHABLE_KEY'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token symbol">:secret_key</span>      <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token constant">ENV</span><span class="token punctuation">[</span><span class="token string">'SECRET_KEY'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+<span class="token constant">Stripe</span><span class="token punctuation">.</span><span class="token function">api_key</span> <span class="token operator">=</span> <span class="token constant">Rails</span><span class="token punctuation">.</span>configuration<span class="token punctuation">.</span><span class="token function">stripe</span><span class="token punctuation">[</span><span class="token symbol">:secret_key</span><span class="token punctuation">]</span></code><span class="line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span></span><span class="line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre>
+</div>
+
+<p>These keys values are pulled out of environmental variables so as not to hardcode them. It’s best practice not to write API keys into your code, where they could easily wind up in source control repositories and other non-private destinations.</p></section>
+
+<section>
+<h2 id="creating-the-views">Creating the views<a class="anchor" href="https://stripe.com/docs/checkout/rails#creating-the-views"></a></h2>
+
+<p>The next step is to create the relevant views: for the credit card form and for the charge response. Create a <strong>charges.html.erb</strong> layout under <strong>app/views/layouts</strong>:</p>
+<div class="code">
+  <pre class=" numbered  language-html"><code class="  language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token erb language-ruby"><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> <span class="token keyword">yield</span> <span class="token operator">%</span><span class="token operator">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code><span class="line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span class="line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre>
+</div>
+
+<p>Now create <strong>new.html.erb</strong> under <strong>app/views/charges</strong>, which is the checkout page. Notice the page uses <a href="https://stripe.com/docs/checkout">Checkout</a>. Checkout displays a credit card overlay form, performs basic validation, and reports errors inline.</p>
+
+<p>The form also has a place to report any server-side error that may occur:</p>
+<div class="code">
+  <pre class=" numbered  language-html"><code class="  language-html"><span class="token erb language-ruby"><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> form_tag charges_path <span class="token keyword">do</span> <span class="token operator">%</span><span class="token operator">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>article</span><span class="token punctuation">&gt;</span></span>
+    <span class="token erb language-ruby"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> flash<span class="token punctuation">[</span><span class="token symbol">:error</span><span class="token punctuation">]</span><span class="token punctuation">.</span>present<span class="token operator">?</span> <span class="token operator">%</span><span class="token operator">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token string">"error_explanation"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token erb language-ruby"><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> flash<span class="token punctuation">[</span><span class="token symbol">:error</span><span class="token punctuation">]</span> <span class="token operator">%</span><span class="token operator">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token erb language-ruby"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">end</span> <span class="token operator">%</span><span class="token operator">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token string">"amount"</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>Amount: $5.00<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>article</span><span class="token punctuation">&gt;</span></span>
+
+  &lt;script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<span class="token erb language-ruby"><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> <span class="token constant">Rails</span><span class="token punctuation">.</span>configuration<span class="token punctuation">.</span><span class="token function">stripe</span><span class="token punctuation">[</span><span class="token symbol">:publishable_key</span><span class="token punctuation">]</span> <span class="token operator">%</span><span class="token operator">&gt;</span></span><span class="token script language-javascript">"
+          data<span class="token operator">-</span>description<span class="token operator">=</span><span class="token string">"A month's subscription"</span>
+          data<span class="token operator">-</span>amount<span class="token operator">=</span><span class="token string">"500"</span>
+          data<span class="token operator">-</span>locale<span class="token operator">=</span><span class="token string">"auto"</span><span class="token operator">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token erb language-ruby"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">end</span> <span class="token operator">%</span><span class="token operator">&gt;</span></span></code><span class="line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span class="line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre>
+</div>
+
+<p>Finally, make a <strong>create.html.erb</strong> view under <strong>app/views/charges</strong> that shows users a success message:</p>
+<div class="code">
+  <pre class=" numbered  language-html"><code class="  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>Thanks, you paid <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>$5.00<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span>!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span></code><span class="line-numbers"><span></span></span><span class="line-numbers"><span></span></span></pre>
+</div>
+
+<p>And that’s a wrap! A complete Stripe and Rails integration in a matter of minutes.</p></section>
+
+<section>
+<h2 id="testing-the-integration">Testing the integration<a class="anchor" href="https://stripe.com/docs/checkout/rails#testing-the-integration"></a></h2>
+
+<p>To test the integration, start the Rails server, making sure to set the environmental variables to your <a href="https://dashboard.stripe.com/account/apikeys">publishable and secret keys</a>. For now, use the test keys, rather than your live ones:</p>
+<div class="code">
+  <nav class="nav-filename icon-terminal">
+    Terminal
+  </nav>
+  <pre class=" numbered  language-bash"><code class="  language-bash">PUBLISHABLE_KEY<span class="token operator">=</span>pk_test_6pRNASCoBOKtIshFeQd4XMUh \
+SECRET_KEY<span class="token operator">=</span>sk_test_BQokikJOvBiI2HlWgH4olfQ2 rails s</code><span class="line-numbers"><span></span><span></span></span><span class="line-numbers"><span></span><span></span></span></pre>
+</div>
+
+<p>We’ve placed random API keys in the code. Replace these with your <a href="https://dashboard.stripe.com/account/apikeys">actual API keys</a> to test this code for yourself.</p>
+
+<p>Now, navigate to <a href="http://localhost:3000/charges/new">http://localhost:3000/charges/new</a> to see the payment form ready to use. If you’re using test API keys, you can try the process with some dummy data. Enter the special credit card number <strong>4242 4242 4242 4242</strong>, a three-digit CVC, and any expiry date in the future. Submitting the form should bring up the successful charge page, and you can see the charge in the <a href="https://dashboard.stripe.com/test/payments/overview">Dashboard</a>.</p></section>
+
+<section>
+<h2 id="deploying-to-heroku">Deploying to Heroku<a class="anchor" href="https://stripe.com/docs/checkout/rails#deploying-to-heroku"></a></h2>
+
+<p>Now that you’ve created a basic payment page, you can deploy it somewhere so people can use it! Heroku is an awesome way to do this, and integrates seamlessly with Rails and Rack. First, get a <a href="https://www.heroku.com/">Heroku</a> account, and install the <a href="https://toolbelt.heroku.com/">Heroku Toolbelt</a>.</p>
+
+<p>Now tell Heroku to deploy the application:</p>
+<div class="code">
+  <nav class="nav-filename icon-terminal">
+    Terminal
+  </nav>
+  <pre class=" numbered  language-bash"><code class="  language-bash"><span class="token function">git</span> init<span class="token function">
+git</span> add <span class="token keyword">.</span><span class="token function">
+git</span> commit -m <span class="token string">'My simple Stripe application'</span>
+heroku create
+heroku config:set PUBLISHABLE_KEY<span class="token operator">=</span>pk_test_6pRNASCoBOKtIshFeQd4XMUh SECRET_KEY<span class="token operator">=</span>sk_test_BQokikJOvBiI2HlWgH4olfQ2<span class="token function">
+git</span> push heroku master
+heroku<span class="token function"> open</span></code><span class="line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span class="line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre>
+</div>
+
+<p>Again, when you’re ready for production usage, provide your live API keys in the deploy.</p></section>
+
+
+          <footer>
+  <h2 id="questions">Questions?<a class="anchor" href="https://stripe.com/docs/checkout/rails#questions"></a></h2>
+  <p>We're always happy to help with code or other questions you might have! <a href="https://support.stripe.com/">Search</a> our site for more information, <a href="https://support.stripe.com/email">send us an email</a>, or <a href="https://stripe.com/contact/sales">get in touch</a> with our sales team!</p>
+</footer>
+
+        </article>
+      </div>
+    </div>
+
+    <div id="loading-bar"></div>
+
+    <script src="./Rails Checkout Guide_files/jquery.min-94df374d2ad5d02ae136584dc008fb1c.js"></script>
+    <script src="./Rails Checkout Guide_files/prism-aa9f4cb7aff3f31b5394455bcbea0d8b.js"></script>
+    <script src="./Rails Checkout Guide_files/dynamics.min-14579f80273a61e6d0f4f45484e20dc7.js"></script>
+    <script src="./Rails Checkout Guide_files/jquery.cookie-d7482a1bbfda18d981eda4398666acdd.js"></script>
+    <script src="./Rails Checkout Guide_files/new-documentation-f74ab93458697772e3fc1f1cf78a3a4f.js"></script>
+    <script>
+      parseKey("sk_test_BQokikJOvBiI2HlWgH4olfQ2", "secret-key", null);
+      parseKey("pk_test_6pRNASCoBOKtIshFeQd4XMUh", "publishable-key", null);
+    </script>
+      <script type="text/javascript" src="./Rails Checkout Guide_files/saved_resource"></script>
+
+    
+    <script src="./Rails Checkout Guide_files/config-aead70c07cdca45cec67e4141bf18edc.js"></script>
+    
+<script type="application/json" id="analytics_config">{&quot;mixpanel&quot;:{&quot;identifier&quot;:&quot;eb71b6171a4f7ed97de9b7a0395b7ca5&quot;},&quot;ga&quot;:{},&quot;trackpage&quot;:true}</script>
+
+<script src="https://js.stripe.com/internal/v2/analytics.min.js"></script>
+<script src="./Rails Checkout Guide_files/analytics-e800ab0ba76de2b697ea3f61c673695b.js"></script>
+<script src="./Rails Checkout Guide_files/mirador-fefcb40ca962335c1520b9d24f8720b1.js"></script>
+<script src="./Rails Checkout Guide_files/mirador_ping-24283614e9bf3443e5f662849b85bff6.js"></script>
+
+    <script type="text/javascript">
+    if ('Analytics' in window) {
+      Analytics.viewed("docs", {
+        docs_version: "2",
+      });
+    }
+    </script>
+  
+
+</body></html>

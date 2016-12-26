@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://devcenter.heroku.com/articles/getting-started-with-rails5 -->
+<html lang="en" class=" js flexbox flexboxlegacy hashchange history rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Getting Started with Rails 5.x on Heroku | Heroku Dev Center</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://www.herokucdn.com/favicon.ico">
+
+    <link rel="alternate" type="application/atom+xml" title="Heroku Recent Articles" href="http://feeds.feedburner.com/herokudevcenterarticles">
+    <link rel="alternate" type="application/atom+xml" title="Heroku Changelog" href="http://feeds.feedburner.com/herokuchangelog">
+  <link rel="search" type="application/opensearchdescription+xml" title="Heroku Dev Center" href="https://devcenter.heroku.com/opensearch.xml">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<script type="text/javascript" src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/277498ec79"></script><script type="text/javascript" src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/pd.js"></script><script src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/nr-998.min.js"></script><script async="" src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/fbevents.js"></script><script type="text/javascript" async="" src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/linkid.js"></script><script type="text/javascript" async="" src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/conversion_async.js"></script><script type="text/javascript" async="" src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/51b6483a434bba0f0c000016.js"></script><script type="text/javascript" async="" src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/analytics.js"></script><script async="" src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/gtm.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"277498ec79","applicationID":"7135218","transactionName":"JQxeQ0peWVVTQ01UExIKU1tdQhpKXl4V","queueTime":5,"applicationTime":107,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="BqfbSp4ATqg9s2mxpWivG7BkCYDiwWKHyjOiXih/B38QedLw+ZjZ2Zpa1bHK/OGOB1fNevgCfTMB2KBOwsPsPQ==">
+
+  
+
+  <meta name="description" content="Creating, configuring, deploying and scaling Rails 5.x applications on Heroku, using Bundler dependency management.">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@herokudevcenter">
+    <meta name="twitter:title" content="Getting Started with Rails 5.x on Heroku | Heroku Dev Center">
+    <meta name="twitter:description" content="Creating, configuring, deploying and scaling Rails 5.x applications on Heroku, using Bundler dependency management.">
+    <meta name="twitter:image" content="https://d3jbcm4ivkrzh.cloudfront.net/assets/public/heroku-og-cad174838a49b266550809e29026ec9bc18e056dae8f9cf523ea4237379691f9.png">
+
+  <meta property="og:image:secure_url" content="https://d3jbcm4ivkrzh.cloudfront.net/assets/public/heroku-og-cad174838a49b266550809e29026ec9bc18e056dae8f9cf523ea4237379691f9.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="google-site-verification" content="V3T3n-QnyNOZlSVZgEfdXaKkJKyfw2yIP55nR00C8ZU">
+
+
+  <link rel="stylesheet" media="screen, print" href="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/public-9aa0f3d9e39f679131639283d1799d73177427f91910282008e619c1ee63761f.css">
+  
+<script type="text/javascript" async="" src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/tagjs"></script><img src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/saved_resource" width="1" height="1" border="0"><img src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/saved_resource(1)" width="1" height="1" border="0"><img src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/saved_resource(2)" width="1" height="1" border="0"><img src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/saved_resource(3)" width="1" height="1" border="0"><img src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/saved_resource(4)" width="1" height="1" border="0"><img src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/saved_resource(5)" width="1" height="1" border="0"><img src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/saved_resource(6)" width="1" height="1" border="0"><img src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/saved_resource(7)" width="1" height="1" border="0"><img src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/saved_resource(8)" width="1" height="1" border="0"><img src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/saved_resource(9)" width="1" height="1" border="0"><img src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/tr" width="1" height="1" border="0"><img src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/tr(1)" width="1" height="1" border="0"><img src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/seg" width="1" height="1" border="0"><script type="text/javascript" src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/analytics"></script></head>
+<body>
+<div class="page-wrapper">
+<header><div id="primary-header">
+<nav id="navigation" role="navigation"><span aria-hidden="true" class="mobile-nav">Show nav<span></span><span></span><span></span><span></span></span><div class="wrapper-full">
+<div id="logo"><a class="heroku-brand" href="https://devcenter.heroku.com/">Heroku Dev Center</a></div>
+<div class="nav-wrapper">
+<ul class="main-nav">
+<li class="secondary-links"><ul>
+<li class="getting-started"><a href="https://devcenter.heroku.com/start">Getting Started</a></li>
+<li class="reference"><a href="https://devcenter.heroku.com/categories/reference">Reference</a></li>
+<li class="learning"><a href="https://devcenter.heroku.com/categories/learning">Learning</a></li>
+</ul></li>
+<li class="has-dropdown">
+<a>By Language</a><ul class="dropdown dropdown-sm">
+<li><a href="https://devcenter.heroku.com/categories/nodejs">Node.js</a></li>
+<li><a href="https://devcenter.heroku.com/categories/ruby">Ruby</a></li>
+<li><a href="https://devcenter.heroku.com/categories/java">Java</a></li>
+<li><a href="https://devcenter.heroku.com/categories/php">PHP</a></li>
+<li><a href="https://devcenter.heroku.com/categories/python">Python</a></li>
+<li><a href="https://devcenter.heroku.com/categories/go">Go</a></li>
+<li><a href="https://devcenter.heroku.com/categories/scala">Scala</a></li>
+<li><a href="https://devcenter.heroku.com/categories/clojure">Clojure</a></li>
+</ul>
+</li>
+<li class="has-dropdown">
+<a>Develop</a><ul class="dropdown">
+<li><a href="https://devcenter.heroku.com/categories/heroku-architecture">Heroku Architecture</a></li>
+<li><a href="https://devcenter.heroku.com/categories/features">Features</a></li>
+<li><a href="https://devcenter.heroku.com/categories/command-line">Command Line</a></li>
+<li><a href="https://devcenter.heroku.com/categories/deployment">Deployment</a></li>
+<li><a href="https://devcenter.heroku.com/categories/security">Security</a></li>
+<li><a href="https://devcenter.heroku.com/categories/application-architecture">Application Architecture</a></li>
+<li><a href="https://devcenter.heroku.com/categories/extending-heroku">Extending Heroku</a></li>
+</ul>
+</li>
+<li><a href="https://devcenter.heroku.com/categories/support">Support</a></li>
+<li class="has-dropdown">
+<a class="nav-more">More</a><div class="dropdown more">
+<section class="more-resources"><span class="more-title">Additional Resources</span><ul>
+<li><a href="https://elements.heroku.com/">Elements</a></li>
+<li><a href="https://www.heroku.com/products">Products</a></li>
+<li><a href="https://www.heroku.com/pricing">Pricing</a></li>
+<li><a href="https://www.heroku.com/careers">Careers</a></li>
+<li><a href="https://help.heroku.com/">Help</a></li>
+<li><a href="https://status.heroku.com/">Status</a></li>
+<li><a href="https://www.heroku.com/events">Events</a></li>
+</ul></section><section class="more-blog" id="more-blog"><span class="more-title">Heroku Blog</span><h3><a class="js-blog-link" href="https://blog.heroku.com/ruby-2-4-features-hashes-integers-rounding">Ruby 2.4 Released: Faster Hashes, Unified Integers and Better Rounding</a></h3>
+<p class="js-blog-date">7 hours ago by Jonan Scheffler</p>
+<p class="js-blog-content"><p>The Ruby maintainers continued their annual tradition by gifting us a new Ruby version to celebrate the holiday: <a href="https://www.ruby-lang.org/en/news/2016/12/25/ruby-2-4-0-released/">Ruby...</a> <a href="https://blog.heroku.com/ruby-2-4-features-hashes-integers-rounding">Read More</a></p></p>
+<a class="button btn-default btn-sm btn-inline" href="https://blog.heroku.com/">Visit Blog</a></section>
+</div>
+</li>
+</ul>
+<ul class="tool-nav">
+<li><div id="search-field-mobile"><form class="search-form" action="https://devcenter.heroku.com/search/raw" accept-charset="UTF-8" method="get">
+<input name="utf8" type="hidden" value="✓"><div class="search-input-group">
+<span class="icon-search"></span><input type="text" name="query" id="query" placeholder="Search" required="required" class="js-search form-control" tabindex="1">
+</div>
+</form></div></li>
+<li class="user">
+<a href="https://devcenter.heroku.com/login?back_to=%2Farticles%2Fgetting-started-with-rails5">Log in</a><span>or</span><a class="sign-up highlight" data-trackable="{&quot;category&quot;:&quot;Sign Up Links&quot;,&quot;action&quot;:&quot;Clicked&quot;,&quot;label&quot;:&quot;dc&quot;}" href="https://signup.heroku.com/dc">Sign up</a>
+</li>
+</ul>
+</div>
+</div></nav><div id="search-field-desktop"><form class="search-form" action="https://devcenter.heroku.com/search/raw" accept-charset="UTF-8" method="get">
+<input name="utf8" type="hidden" value="✓"><div class="search-input-group">
+<span class="icon-search"></span><input type="text" name="query" id="query" placeholder="Search" required="required" class="js-search form-control" tabindex="1">
+</div>
+</form></div>
+</div>
+<div id="secondary-header"><div class="page-subnav"><ul class="nav navbar-nav">
+<li class="getting-started"><a href="https://devcenter.heroku.com/start">Getting Started</a></li>
+<li class="reference"><a href="https://devcenter.heroku.com/categories/reference">Reference</a></li>
+<li class="learning"><a class=" active" href="https://devcenter.heroku.com/categories/learning">Learning</a></li>
+</ul></div></div></header><div class="container">
+<div class="col-md-4 sidebar nocontent"><ul class="secondary-nav nav"><li>
+<h2>Learning</h2>
+<ul><li><a href="https://devcenter.heroku.com/categories/application-architecture">Application Architecture</a></li></ul>
+<ul>
+<li><a href="https://devcenter.heroku.com/categories/nodejs">Node.js</a></li>
+<li><a class=" active" href="https://devcenter.heroku.com/categories/ruby">Ruby</a></li>
+<li><a href="https://devcenter.heroku.com/categories/java">Java</a></li>
+<li><a href="https://devcenter.heroku.com/categories/php">PHP</a></li>
+<li><a href="https://devcenter.heroku.com/categories/python">Python</a></li>
+<li><a href="https://devcenter.heroku.com/categories/go">Go</a></li>
+<li><a href="https://devcenter.heroku.com/categories/scala">Scala</a></li>
+<li><a href="https://devcenter.heroku.com/categories/clojure">Clojure</a></li>
+</ul>
+<ul>
+<li><a href="https://devcenter.heroku.com/categories/mobile">Mobile</a></li>
+<li><a href="https://devcenter.heroku.com/categories/database">Database</a></li>
+</ul>
+<ul><li><a href="https://devcenter.heroku.com/categories/miscellaneous">Miscellaneous</a></li></ul>
+<ul><li><a href="https://devcenter.heroku.com/categories/add-on-documentation">All Add-ons</a></li></ul>
+</li></ul></div>
+<div class="col-md-8 content"><article class="js-autolink "><h1>Getting Started with Rails 5.x on Heroku</h1>
+<p class="last-updated"><span class="icon-clock"></span>Last updated 03 October 2016</p>
+<div id="table-of-contents">
+<h3>
+<span class="icon-list"></span>Table of Contents</h3>
+<ul>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#local-workstation-setup">Local workstation setup</a></li>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#write-your-app">Write your app</a></li>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#database">Database</a></li>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#welcome-page">Welcome page</a></li>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#heroku-gems">Heroku gems</a></li>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#specify-ruby-version-in-app">Specify Ruby version in app</a></li>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#store-your-app-in-git">Store your app in Git</a></li>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#deploy-your-application-to-heroku">Deploy your application to Heroku</a></li>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#migrate-your-database">Migrate your database</a></li>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#visit-your-application">Visit your application</a></li>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#view-the-logs">View the logs</a></li>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#dyno-sleeping-and-scaling">Dyno sleeping and scaling</a></li>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#rails-console">Rails console</a></li>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#rake">Rake</a></li>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#webserver">Webserver</a></li>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#rails-asset-pipeline">Rails asset pipeline</a></li>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#troubleshooting">Troubleshooting</a></li>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#done">Done</a></li>
+</ul>
+</div>
+<!-- STOP
+This file was generated by a rundoc script, don't modify it.
+Instead modify the rundoc script and re-run it.
+STOP -->
+
+<!--
+  rundoc src:
+  https://github.com/schneems/rundoc/blob/master/test/fixtures/rails_5/rundoc.md
+-->
+
+<p>Ruby on Rails is a popular web framework written in <a href="http://www.ruby-lang.org/">Ruby</a>. This guide covers using Rails 5 on Heroku. For information about running previous versions of Rails on Heroku, see <a href="https://devcenter.heroku.com/articles/getting-started-with-rails4">Getting Started with Rails 4.x on Heroku</a> or <a href="https://devcenter.heroku.com/articles/getting-started-with-rails3">Getting Started with Rails 3.x on Heroku</a>.</p>
+
+<p>For this guide you will need:</p>
+
+<ul>
+<li>Basic Ruby/Rails knowledge.</li>
+<li>A locally installed version of Ruby 2.2.0+, Rubygems, Bundler, and Rails 5+.</li>
+<li>Basic Git knowledge.</li>
+<li>A Heroku user account: <a href="https://signup.heroku.com/devcenter">Signup is free and instant</a>.</li>
+</ul>
+
+<h2 id="local-workstation-setup"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#local-workstation-setup">Local workstation setup</a></h2>
+
+<p>Install the <a href="https://toolbelt.heroku.com/">Heroku Toolbelt</a> on your local workstation. This ensures that you have access to the <a href="https://devcenter.heroku.com/categories/command-line">Heroku command-line client</a>, Heroku Local, and the Git revision control system. You will also need <a href="http://guides.railsgirls.com/install">Ruby and Rails installed</a>.</p>
+
+<p>Once installed, you’ll have access to the <code>$ heroku</code> command from your command shell. Log in using the email address and password you used when creating your Heroku account:</p>
+
+<div class="callout">
+<p>Note that <code>$</code> symbol before commands indicates they should be run on the command line, prompt, or terminal with appropriate permissions. Do not copy the <code>$</code> symbol.</p>
+</div>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> heroku login
+</span><span class="string">Enter your Heroku credentials.
+</span><span class="string">Email: schneems@example.com
+</span><span class="string">Password:
+</span><span class="string">Could not find an existing public key.
+</span><span class="string">Would you like to generate one? [Yn]
+</span><span class="string">Generating new SSH public key.
+</span><span class="string">Uploading ssh public key /Users/adam/.ssh/id_rsa.pub
+</span></pre></div>
+</div>
+
+
+<p>Press enter at the prompt to upload your existing <code>ssh</code> key or create a new one, used for pushing code later on.</p>
+
+<h2 id="write-your-app"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#write-your-app">Write your app</a></h2>
+
+<div class="callout">
+<p>To run on Heroku, your app must be configured to use the Postgres database, have all dependencies declared in your <code>Gemfile</code>.</p>
+</div>
+
+<p>If you are starting from an existing app, <a href="http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html#upgrading-from-rails-4-2-to-rails-5-0">upgrade to Rails 5</a> before continuing. If not, a vanilla Rails 5 app will serve as a suitable sample app. To build a new app make sure that you’re using the Rails 5.x using <code>$ rails -v</code>. You can get the new version of rails by running,</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> gem install rails --no-ri --no-rdoc
+</span><span class="string">Successfully installed rails-5.0.0.1
+</span><span class="string">1 gem installed
+</span></pre></div>
+</div>
+
+
+<p>Then create a new app:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> rails new myapp --database=postgresql
+</span></pre></div>
+</div>
+
+
+<p>Then move into your application directory.</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> cd myapp
+</span></pre></div>
+</div>
+
+
+<div class="callout">
+<p>If you experience problems or get stuck with this tutorial, your questions may be answered in a later part of this document. If  you experience a problem, try reading through the entire document and then go back to your issue. It can also be useful to review your previous steps to ensure they all executed correctly.</p>
+</div>
+
+<h2 id="database"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#database">Database</a></h2>
+
+<p>If you already have an app that was created without specifying <code>--database=postgresql</code> you will need to add the <code>pg</code> gem to your Rails project. Edit your <code>Gemfile</code> and change this line:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>gem <span class="string"><span class="delimiter">'</span><span class="content">sqlite3</span><span class="delimiter">'</span></span>
+</pre></div>
+</div>
+
+
+<p>To this:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>gem <span class="string"><span class="delimiter">'</span><span class="content">pg</span><span class="delimiter">'</span></span>
+</pre></div>
+</div>
+
+
+<div class="callout">
+<p>We highly recommend using PostgreSQL during development. Maintaining <a href="http://www.12factor.net/dev-prod-parity">parity between your development</a> and deployment environments prevents subtle bugs from being introduced because of differences between your environments. <a href="https://devcenter.heroku.com/articles/heroku-postgresql#local-setup">Install Postgres locally</a> now if it is not already on your system.</p>
+</div>
+
+<p>Now re-install your dependencies (to generate a new <code>Gemfile.lock</code>):</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="error">$</span> bundle install
+</pre></div>
+</div>
+
+
+<p>To get more information on why this change is needed and how to configure your app to run Postgres locally, see <a href="https://devcenter.heroku.com/articles/sqlite3">why you cannot use Sqlite3 on Heroku</a>.</p>
+
+<p>In addition to using the <code>pg</code> gem, you’ll also need to ensure the <code>config/database.yml</code> is using the <code>postgresql</code> adapter.</p>
+
+<p>The development section of your <code>config/database.yml</code> file should look something like this:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> cat config/database.yml
+</span><span class="string"># PostgreSQL. Versions 9.1 and up are supported.
+</span><span class="string">#
+</span><span class="string"># Install the pg driver:
+</span><span class="string">#   gem install pg
+</span><span class="string"># On OS X with Homebrew:
+</span><span class="string">#   gem install pg -- --with-pg-config=/usr/local/bin/pg_config
+</span><span class="string"># On OS X with MacPorts:
+</span><span class="string">#   gem install pg -- --with-pg-config=/opt/local/lib/postgresql84/bin/pg_config
+</span><span class="string"># On Windows:
+</span><span class="string">#   gem install pg
+</span><span class="string">#       Choose the win32 build.
+</span><span class="string">#       Install PostgreSQL and put its /bin directory on your path.
+</span><span class="string">#
+</span><span class="string"># Configure Using Gemfile
+</span><span class="string"># gem 'pg'
+</span><span class="string">#
+</span><span class="string">default: &amp;default
+</span><span class="string">  adapter: postgresql
+</span><span class="string">  encoding: unicode
+</span><span class="string">  # For details on connection pooling, see rails configuration guide
+</span><span class="string">  # http://guides.rubyonrails.org/configuring.html#database-pooling
+</span><span class="string">  pool: &lt;%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %&gt;
+</span><span class="string">
+</span><span class="string">development:
+</span><span class="string">  &lt;&lt;: *default
+</span><span class="string">  database: myapp_development
+</span><span class="string">
+</span><span class="string">  # The specified database role being used to connect to postgres.
+</span><span class="string">  # To create additional roles in postgres see `$ createuser --help`.
+</span><span class="string">  # When left blank, postgres will use the default role. This is
+</span><span class="string">  # the same name as the operating system user that initialized the database.
+</span><span class="string">  #username: myapp
+</span><span class="string">
+</span><span class="string">  # The password associated with the postgres role (username).
+</span><span class="string">  #password:
+</span><span class="string">
+</span><span class="string">  # Connect on a TCP socket. Omitted by default since the client uses a
+</span><span class="string">  # domain socket that doesn't need configuration. Windows does not have
+</span><span class="string">  # domain sockets, so uncomment these lines.
+</span><span class="string">  #host: localhost
+</span><span class="string">
+</span><span class="string">  # The TCP port the server listens on. Defaults to 5432.
+</span><span class="string">  # If your server runs on a different port number, change accordingly.
+</span><span class="string">  #port: 5432
+</span><span class="string">
+</span><span class="string">  # Schema search path. The server defaults to $user,public
+</span><span class="string">  #schema_search_path: myapp,sharedapp,public
+</span><span class="string">
+</span><span class="string">  # Minimum log levels, in increasing order:
+</span><span class="string">  #   debug5, debug4, debug3, debug2, debug1,
+</span><span class="string">  #   log, notice, warning, error, fatal, and panic
+</span><span class="string">  # Defaults to warning.
+</span><span class="string">  #min_messages: notice
+</span><span class="string">
+</span><span class="string"># Warning: The database defined as "test" will be erased and
+</span><span class="string"># re-generated from your development database when you run "rake".
+</span><span class="string"># Do not set this db to the same as development or production.
+</span><span class="string">test:
+</span><span class="string">  &lt;&lt;: *default
+</span><span class="string">  database: myapp_test
+</span><span class="string">
+</span><span class="string"># As with config/secrets.yml, you never want to store sensitive information,
+</span><span class="string"># like your database password, in your source code. If your source code is
+</span><span class="string"># ever seen by anyone, they now have access to your database.
+</span><span class="string">#
+</span><span class="string"># Instead, provide the password as a unix environment variable when you boot
+</span><span class="string"># the app. Read http://guides.rubyonrails.org/configuring.html#configuring-a-database
+</span><span class="string"># for a full rundown on how to provide these environment variables in a
+</span><span class="string"># production deployment.
+</span><span class="string">#
+</span><span class="string"># On Heroku and other platform providers, you may have a full connection URL
+</span><span class="string"># available as an environment variable. For example:
+</span><span class="string">#
+</span><span class="string">#   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
+</span><span class="string">#
+</span><span class="string"># You can use this database configuration with:
+</span><span class="string">#
+</span><span class="string">#   production:
+</span><span class="string">#     url: &lt;%= ENV['DATABASE_URL'] %&gt;
+</span><span class="string">#
+</span><span class="string">production:
+</span><span class="string">  &lt;&lt;: *default
+</span><span class="string">  database: myapp_production
+</span><span class="string">  username: myapp
+</span><span class="string">  password: &lt;%= ENV['MYAPP_DATABASE_PASSWORD'] %&gt;
+</span></pre></div>
+</div>
+
+
+<p>Be careful here. If you omit the <code>sql</code> at the end of <code>postgresql</code> in the <code>adapter</code> section, your application will not work.</p>
+
+<h2 id="welcome-page"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#welcome-page">Welcome page</a></h2>
+
+<p>Rails 5 no longer has a static index page in production. When you’re using a new app, there will not be a root page in production, so we need to create one. We will first create a controller called <code>welcome</code> for our home page to live:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> rails generate controller welcome
+</span></pre></div>
+</div>
+
+
+<p>Next we’ll add an index page.</p>
+
+<p>In file <code>app/views/welcome/index.html.erb</code> write:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="tag">&lt;h2&gt;</span>Hello World<span class="tag">&lt;/h2&gt;</span>
+<span class="tag">&lt;p&gt;</span>
+  The time is now: <span class="error">&lt;</span>%= Time.now %<span class="error">&gt;</span>
+<span class="tag">&lt;/p&gt;</span>
+</pre></div>
+</div>
+
+
+<p>Now we need to make Rails route to this action. We’ll edit <code>config/routes.rb</code> to set the index page to our new method:</p>
+
+<p>In file <code>config/routes.rb</code>, on line 2 add:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>  root <span class="string"><span class="delimiter">'</span><span class="content">welcome#index</span><span class="delimiter">'</span></span>
+</pre></div>
+</div>
+
+
+<p>You can verify that the page is there by running your server:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> rails server
+</span></pre></div>
+</div>
+
+
+<p>And visiting <a href="http://localhost:3000/">http://localhost:3000</a> in your browser. If you do not see the page, <a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#view-the-logs">use the logs</a> that are output to your server to debug.</p>
+
+<h2 id="heroku-gems"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#heroku-gems">Heroku gems</a></h2>
+
+<p>Previous versions of Rails required you toadd a gem to your project <a href="https://github.com/heroku/rails_12factor">rails_12factor</a> to enable static asset serving and logging on Heroku. If you are deploying a new application this gem is not needed. If you are upgrading an existing application you can remove this gem provided you have the apprpriate configuration in your <code>config/environments/production.rb</code> file:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="comment"># config/environments/production.rb</span>
+config.public_file_server.enabled = <span class="predefined-constant">ENV</span>[<span class="string"><span class="delimiter">'</span><span class="content">RAILS_SERVE_STATIC_FILES</span><span class="delimiter">'</span></span>].present?
+<span class="keyword">if</span> <span class="predefined-constant">ENV</span>[<span class="string"><span class="delimiter">"</span><span class="content">RAILS_LOG_TO_STDOUT</span><span class="delimiter">"</span></span>].present?
+  logger           = <span class="constant">ActiveSupport</span>::<span class="constant">Logger</span>.new(<span class="predefined-constant">STDOUT</span>)
+  logger.formatter = config.log_formatter
+  config.logger = <span class="constant">ActiveSupport</span>::<span class="constant">TaggedLogging</span>.new(logger)
+<span class="keyword">end</span>
+</pre></div>
+</div>
+
+
+<h2 id="specify-ruby-version-in-app"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#specify-ruby-version-in-app">Specify Ruby version in app</a></h2>
+
+<p>Rails 5 requires Ruby 2.2.0 or above. Heroku has a recent version of Ruby installed, however you can specify an exact version by using the <code>ruby</code> DSL in your <code>Gemfile</code>.</p>
+
+<p>At the end of <code>Gemfile</code> add:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>ruby <span class="string"><span class="delimiter">"</span><span class="content">2.3.1</span><span class="delimiter">"</span></span>
+</pre></div>
+</div>
+
+
+<p>You should also be running the same version of Ruby locally. You can check this by running <code>$ ruby -v</code>. You can get more information on <a href="https://devcenter.heroku.com/articles/ruby-versions">specifying your Ruby version on Heroku here</a>.</p>
+
+<h2 id="store-your-app-in-git"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#store-your-app-in-git">Store your app in Git</a></h2>
+
+<p>Heroku relies on <a href="http://git-scm.com/">Git</a>, a distributed source control management tool, for deploying your project. If your project is not already in Git, first verify that <code>git</code> is on your system:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> git --help
+</span><span class="string">usage: git [--version] [--help] [-C &lt;path&gt;] [-c name=value]
+</span><span class="string">           [--exec-path[=&lt;path&gt;]] [--html-path] [--man-path] [--info-path]
+</span><span class="string">           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+</span><span class="string">           [--git-dir=&lt;path&gt;] [--work-tree=&lt;path&gt;] [--namespace=&lt;name&gt;]
+</span><span class="string">           &lt;command&gt; [&lt;args&gt;]
+</span></pre></div>
+</div>
+
+
+<p>If you don’t see any output or get <code>command not found</code> you will need to install it on your system. Verify that the <a href="https://toolbelt.heroku.com/">Heroku toolbelt</a> is installed.</p>
+
+<p>Once you’ve verified that Git works, first make sure you are in your Rails app directory by running <code>$ ls</code>:</p>
+
+<p>The output should look like this:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> ls
+</span><span class="string">Gemfile
+</span><span class="string">Gemfile.lock
+</span><span class="string">README.md
+</span><span class="string">Rakefile
+</span><span class="string">app
+</span><span class="string">bin
+</span><span class="string">config
+</span><span class="string">config.ru
+</span><span class="string">db
+</span><span class="string">lib
+</span><span class="string">log
+</span><span class="string">public
+</span><span class="string">test
+</span><span class="string">tmp
+</span><span class="string">vendor
+</span></pre></div>
+</div>
+
+
+<p>Now run these commands in your Rails app directory to initialize and commit your code to Git:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> git init
+</span><span class="prompt">$</span><span class="function"> git add .
+</span><span class="prompt">$</span><span class="function"> git commit -m "init"
+</span></pre></div>
+</div>
+
+
+<p>You can verify everything was committed correctly by running:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> git status
+</span><span class="string">On branch master
+</span><span class="string">nothing to commit, working directory clean
+</span></pre></div>
+</div>
+
+
+<p>Now that your application is committed to Git you can deploy to Heroku.</p>
+
+<h2 id="deploy-your-application-to-heroku"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#deploy-your-application-to-heroku">Deploy your application to Heroku</a></h2>
+
+<p>Make sure you are in the directory that contains your Rails app, then create an app on Heroku:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> heroku create
+</span><span class="string">Creating app... done, infinite-scrubland-50119
+</span><span class="string">https://infinite-scrubland-50119.herokuapp.com/ | https://git.heroku.com/infinite-scrubland-50119.git
+</span></pre></div>
+</div>
+
+
+<p>You can verify that the remote was added to your project by running:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> git config --list | grep heroku
+</span><span class="string">remote.heroku.url=https://git.heroku.com/infinite-scrubland-50119.git
+</span><span class="string">remote.heroku.fetch=+refs/heads/*:refs/remotes/heroku/*
+</span></pre></div>
+</div>
+
+
+<p>If you see <code>fatal: not in a git directory</code> then you are likely not in the correct directory. Otherwise you may deploy your code. After you deploy your code, you will need to migrate your database, make sure it is properly scaled, and use logs to debug any issues that come up.</p>
+
+<p>Deploy your code:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> git push heroku master
+</span><span class="string">remote: Compressing source files... done.
+</span><span class="string">remote: Building source:
+</span><span class="string">remote:
+</span><span class="string">remote: -----&gt; Ruby app detected
+</span><span class="string">remote: -----&gt; Compiling Ruby/Rails
+</span><span class="string">remote: -----&gt; Using Ruby version: ruby-2.3.1
+</span><span class="string">remote: -----&gt; Installing dependencies using bundler 1.11.2
+</span><span class="string">remote:        Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
+</span><span class="string">remote:        Warning: the running version of Bundler is older than the version that created the lockfile. We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
+</span><span class="string">remote:        Fetching gem metadata from https://rubygems.org/..........
+</span><span class="string">remote:        Fetching version metadata from https://rubygems.org/...
+</span><span class="string">remote:        Fetching dependency metadata from https://rubygems.org/..
+</span><span class="string">remote:        Installing rake 11.3.0
+</span><span class="string">remote:        Installing concurrent-ruby 1.0.2
+</span><span class="string">remote:        Installing i18n 0.7.0
+</span><span class="string">remote:        Installing thread_safe 0.3.5
+</span><span class="string">remote:        Installing minitest 5.9.1
+</span><span class="string">remote:        Installing builder 3.2.2
+</span><span class="string">remote:        Installing erubis 2.7.0
+</span><span class="string">remote:        Installing mini_portile2 2.1.0
+</span><span class="string">remote:        Installing pkg-config 1.1.7
+</span><span class="string">remote:        Installing rack 2.0.1
+</span><span class="string">remote:        Installing websocket-extensions 0.1.2
+</span><span class="string">remote:        Installing nio4r 1.2.1 with native extensions
+</span><span class="string">remote:        Installing mime-types-data 3.2016.0521
+</span><span class="string">remote:        Installing arel 7.1.2
+</span><span class="string">remote:        Installing coffee-script-source 1.10.0
+</span><span class="string">remote:        Installing execjs 2.7.0
+</span><span class="string">remote:        Installing method_source 0.8.2
+</span><span class="string">remote:        Installing thor 0.19.1
+</span><span class="string">remote:        Installing multi_json 1.12.1
+</span><span class="string">remote:        Installing pg 0.19.0 with native extensions
+</span><span class="string">remote:        Installing puma 3.6.0 with native extensions
+</span><span class="string">remote:        Using bundler 1.11.2
+</span><span class="string">remote:        Installing sass 3.4.22
+</span><span class="string">remote:        Installing tilt 2.0.5
+</span><span class="string">remote:        Installing turbolinks-source 5.0.0
+</span><span class="string">remote:        Installing tzinfo 1.2.2
+</span><span class="string">remote:        Installing nokogiri 1.6.8 with native extensions
+</span><span class="string">remote:        Installing websocket-driver 0.6.4 with native extensions
+</span><span class="string">remote:        Installing rack-test 0.6.3
+</span><span class="string">remote:        Installing sprockets 3.7.0
+</span><span class="string">remote:        Installing mime-types 3.1
+</span><span class="string">remote:        Installing coffee-script 2.4.1
+</span><span class="string">remote:        Installing uglifier 3.0.2
+</span><span class="string">remote:        Installing turbolinks 5.0.1
+</span><span class="string">remote:        Installing activesupport 5.0.0.1
+</span><span class="string">remote:        Installing mail 2.6.4
+</span><span class="string">remote:        Installing globalid 0.3.7
+</span><span class="string">remote:        Installing activemodel 5.0.0.1
+</span><span class="string">remote:        Installing jbuilder 2.6.0
+</span><span class="string">remote:        Installing activejob 5.0.0.1
+</span><span class="string">remote:        Installing activerecord 5.0.0.1
+</span><span class="string">remote:        Installing loofah 2.0.3
+</span><span class="string">remote:        Installing rails-dom-testing 2.0.1
+</span><span class="string">remote:        Installing rails-html-sanitizer 1.0.3
+</span><span class="string">remote:        Installing actionview 5.0.0.1
+</span><span class="string">remote:        Installing actionpack 5.0.0.1
+</span><span class="string">remote:        Installing actionmailer 5.0.0.1
+</span><span class="string">remote:        Installing actioncable 5.0.0.1
+</span><span class="string">remote:        Installing railties 5.0.0.1
+</span><span class="string">remote:        Installing sprockets-rails 3.2.0
+</span><span class="string">remote:        Installing coffee-rails 4.2.1
+</span><span class="string">remote:        Installing jquery-rails 4.2.1
+</span><span class="string">remote:        Installing rails 5.0.0.1
+</span><span class="string">remote:        Installing sass-rails 5.0.6
+</span><span class="string">remote:        Bundle complete! 15 Gemfile dependencies, 54 gems now installed.
+</span><span class="string">remote:        Gems in the groups development and test were not installed.
+</span><span class="string">remote:        Bundled gems are installed into ./vendor/bundle.
+</span><span class="string">remote:        Bundle completed (31.24s)
+</span><span class="string">remote:        Cleaning up the bundler cache.
+</span><span class="string">remote:        Warning: the running version of Bundler is older than the version that created the lockfile. We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
+</span><span class="string">remote: -----&gt; Preparing app for Rails asset pipeline
+</span><span class="string">remote:        Running: rake assets:precompile
+</span><span class="string">remote:        I, [2016-09-26T03:01:38.942438 #1126]  INFO -- : Writing /tmp/build_4d8f5efc72950386614e8eb901709d0a/public/assets/application-ea005870b2299ed0464e134ab4079aa8856885e9ffd3d81e60417322f2fa0a97.js
+</span><span class="string">remote:        I, [2016-09-26T03:01:38.943047 #1126]  INFO -- : Writing /tmp/build_4d8f5efc72950386614e8eb901709d0a/public/assets/application-ea005870b2299ed0464e134ab4079aa8856885e9ffd3d81e60417322f2fa0a97.js.gz
+</span><span class="string">remote:        I, [2016-09-26T03:01:38.955861 #1126]  INFO -- : Writing /tmp/build_4d8f5efc72950386614e8eb901709d0a/public/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css
+</span><span class="string">remote:        I, [2016-09-26T03:01:38.956050 #1126]  INFO -- : Writing /tmp/build_4d8f5efc72950386614e8eb901709d0a/public/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css.gz
+</span><span class="string">remote:        Asset precompilation completed (3.87s)
+</span><span class="string">remote:        Cleaning assets
+</span><span class="string">remote:        Running: rake assets:clean
+</span><span class="string">remote:
+</span><span class="string">remote: ###### WARNING:
+</span><span class="string">remote:        No Procfile detected, using the default web server.
+</span><span class="string">remote:        We recommend explicitly declaring how to boot your server process via a Procfile.
+</span><span class="string">remote:        https://devcenter.heroku.com/articles/ruby-default-web-server
+</span><span class="string">remote:
+</span><span class="string">remote: -----&gt; Discovering process types
+</span><span class="string">remote:        Procfile declares types     -&gt; (none)
+</span><span class="string">remote:        Default types for buildpack -&gt; console, rake, web, worker
+</span><span class="string">remote:
+</span><span class="string">remote: -----&gt; Compressing...
+</span><span class="string">remote:        Done: 29.4M
+</span><span class="string">remote: -----&gt; Launching...
+</span><span class="string">remote:        Released v5
+</span><span class="string">remote:        https://infinite-scrubland-50119.herokuapp.com/ deployed to Heroku
+</span><span class="string">remote:
+</span><span class="string">remote: Verifying deploy... done.
+</span><span class="string">To https://git.heroku.com/infinite-scrubland-50119.git
+</span><span class="string"> * [new branch]      master -&gt; master
+</span></pre></div>
+</div>
+
+
+<p>It is always a good idea to check to see if there are any warnings or errors in the output. If everything went well you can migrate your database.</p>
+
+<h2 id="migrate-your-database"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#migrate-your-database">Migrate your database</a></h2>
+
+<p>If you are using the database in your application you need to manually migrate the database by running:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> heroku run rake db:migrate
+</span></pre></div>
+</div>
+
+
+<p>Any commands after the <code>heroku run</code> will be executed on a Heroku <a href="https://devcenter.heroku.com/articles/dynos">dyno</a>. You can obtain an interactive shell session by running <code>$ heroku run bash</code>.</p>
+
+<h2 id="visit-your-application"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#visit-your-application">Visit your application</a></h2>
+
+<p>You’ve deployed your code to Heroku. You can now instruct Heroku to execute a process type. Heroku does this by running the associated command in a <a href="https://devcenter.heroku.com/articles/dynos">dyno</a>, which is a lightweight container that is the basic unit of composition on Heroku.</p>
+
+<p>Let’s ensure we have one dyno running the <code>web</code> process type:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> heroku ps:scale web=1
+</span></pre></div>
+</div>
+
+
+<p>You can check the state of the app’s dynos. The <code>heroku ps</code> command lists the running dynos of your application:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> heroku ps
+</span><span class="string">=== web (Standard-1X): bin/rails server -p $PORT -e $RAILS_ENV (1)
+</span><span class="string">web.1: starting 2016/09/25 22:01:48 -0500 (~ 2s ago)
+</span></pre></div>
+</div>
+
+
+<p>Here, one dyno is running.</p>
+
+<p>We can now visit the app in our browser with <code>heroku open</code>.</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> heroku open
+</span></pre></div>
+</div>
+
+
+<p>You should now see the “Hello World” text we inserted above.</p>
+
+<p>Heroku gives you a default web URL for simplicity while you are developing. When you are ready to scale up and use Heroku for production you can add your own <a href="https://devcenter.heroku.com/articles/custom-domains">custom domain</a>.</p>
+
+<h2 id="view-the-logs"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#view-the-logs">View the logs</a></h2>
+
+<p>If you run into any problems getting your app to perform properly, you will need to check the logs.</p>
+
+<p>You can view information about your running app using one of the <a href="https://devcenter.heroku.com/articles/logging">logging commands</a>, <code>heroku logs</code>:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> heroku logs
+</span><span class="string">2016-09-26T03:00:55.758775+00:00 heroku[api]: Enable Logplex by developer@example.com
+</span><span class="string">2016-09-26T03:00:55.758891+00:00 heroku[api]: Release v2 created by developer@example.com
+</span><span class="string">2016-09-26T03:01:46.381291+00:00 heroku[api]: Set LANG, RACK_ENV, RAILS_ENV, RAILS_LOG_TO_STDOUT, RAILS_SERVE_STATIC_FILES, SECRET_KEY_BASE config vars by developer@example.com
+</span><span class="string">2016-09-26T03:01:46.381363+00:00 heroku[api]: Release v3 created by developer@example.com
+</span><span class="string">2016-09-26T03:01:47.316077+00:00 heroku[api]: Attach DATABASE (@ref:postgresql-lively-89835) by developer@example.com
+</span><span class="string">2016-09-26T03:01:47.316191+00:00 heroku[api]: Release v4 created by developer@example.com
+</span><span class="string">2016-09-26T03:01:47.869728+00:00 heroku[api]: Scale to web=1 by developer@example.com
+</span><span class="string">2016-09-26T03:01:47.870311+00:00 heroku[api]: Deploy a00a888 by developer@example.com
+</span><span class="string">2016-09-26T03:01:47.870408+00:00 heroku[api]: Release v5 created by developer@example.com
+</span><span class="string">2016-09-26T03:01:48.481407+00:00 heroku[slug-compiler]: Slug compilation started
+</span><span class="string">2016-09-26T03:01:48.481412+00:00 heroku[slug-compiler]: Slug compilation finished
+</span><span class="string">2016-09-26T03:01:50.745055+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 48308 -e production`
+</span></pre></div>
+</div>
+
+
+<p>You can also get the full stream of logs by running the logs command with the <code>--tail</code> flag option like this:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> heroku logs --tail
+</span></pre></div>
+</div>
+
+
+<h2 id="dyno-sleeping-and-scaling"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#dyno-sleeping-and-scaling">Dyno sleeping and scaling</a></h2>
+
+<p>By default, new applications are deployed to a free dyno. Free apps will “sleep” to conserve resources. You can find more information about this behavior by reading about <a href="https://devcenter.heroku.com/articles/free-dyno-hours">free dyno behavior</a>.</p>
+
+<p>To avoid dyno sleeping, you can upgrade to a hobby or professional dyno type as described in the <a href="https://devcenter.heroku.com/articles/dyno-types">Dyno Types</a> article. For example, if you migrate your app to a professional dyno, you can easily scale it by running a command telling Heroku to execute a specific number of dynos, each running your web process type.</p>
+
+<h2 id="rails-console"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#rails-console">Rails console</a></h2>
+
+<p>Heroku allows you to run commands in a <a href="https://devcenter.heroku.com/articles/one-off-dynos">one-off dyno</a> - scripts and applications that only need to be executed when needed - using the <code>heroku run</code> command. Use this to launch a Rails console process attached to your local terminal for experimenting in your app’s environment:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> heroku run rails console
+</span><span class="string">irb(main):001:0&gt; puts 1+1
+</span><span class="string">2
+</span></pre></div>
+</div>
+
+
+<p>Another useful command for debugging is <code>$ heroku run bash</code> which will spin up a new dyno and give you access to a bash session.</p>
+
+<h2 id="rake"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#rake">Rake</a></h2>
+
+<p>Rake can be run as an attached process exactly like the console:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> heroku run rake db:migrate
+</span></pre></div>
+</div>
+
+
+<h2 id="webserver"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#webserver">Webserver</a></h2>
+
+<p>By default, your app’s web process runs <code>rails server</code>, which uses Puma in Rails 5. If you are upgrading an app you’ll need to add <code>puma</code> to your application <code>Gemfile</code>:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>gem <span class="string"><span class="delimiter">'</span><span class="content">puma</span><span class="delimiter">'</span></span>
+</pre></div>
+</div>
+
+
+<p>Then run</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> bundle install
+</span></pre></div>
+</div>
+
+
+<p>Now you are ready to configure your app to use Puma. For this tutorial we will use the default settings of Puma, but we recommend generating a <code>config/puma.rb</code> file and reading more about configuring your application for maximum performance by <a href="https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server">reading the Puma documentation</a></p>
+
+<p>Finally you will need to tell Heroku how to run your Rails app by creating a <code>Procfile</code> in the root of your application directory.</p>
+
+<h3 id="procfile"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#procfile">Procfile</a></h3>
+
+<p>Change the command used to launch your web process by creating a file called <a href="https://devcenter.heroku.com/articles/procfile">Procfile</a> and entering this:</p>
+
+<p>In file <code>Procfile</code> write:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre>web: bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development}
+</pre></div>
+</div>
+
+
+<p>Note: The case of <code>Procfile</code> matters, the first letter must be uppercase.</p>
+
+<p>We recommend generating a Puma config file based on <a href="https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server">our Puma documentation</a> for maximum performance.</p>
+
+<p>To use the Procfile locally you can use foreman.</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> gem install foreman
+</span></pre></div>
+</div>
+
+
+<p>In addition to running commands in your <code>Procfile</code> foreman can also help you manage environment variables locally through a <code>.env</code> file. Set the local <code>RACK_ENV</code> to development in your environment and a <code>PORT</code> to connect to. Before pushing to Heroku you’ll want to test with the <code>RACK_ENV</code> set to production since this is the environment your Heroku app will run in.</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> echo "RACK_ENV=development" &gt;&gt;.env
+</span><span class="prompt">$</span><span class="function"> echo "PORT=3000" &gt;&gt; .env
+</span></pre></div>
+</div>
+
+
+<blockquote>
+<p>Note: Another alternative to using environment variables locally with a <code>.env</code> file is the <a href="https://github.com/bkeepers/dotenv">dotenv</a> gem.</p>
+</blockquote>
+
+<p>You’ll also want to add <code>.env</code> to your <code>.gitignore</code> since this is for local environment setup.</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> echo ".env" &gt;&gt; .gitignore
+</span><span class="prompt">$</span><span class="function"> git add .gitignore
+</span><span class="prompt">$</span><span class="function"> git commit -m "add .env to .gitignore"
+</span></pre></div>
+</div>
+
+
+<p>Test your Procfile locally using Foreman. You can now start your web server by running:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> foreman start
+</span><span class="string">18:24:56 web.1  | I, [2013-03-13T18:24:56.885046 #18793]  INFO -- : listening on addr=0.0.0.0:3000 fd=7
+</span><span class="string">18:24:56 web.1  | I, [2013-03-13T18:24:56.885140 #18793]  INFO -- : worker=0 spawning...
+</span><span class="string">18:24:56 web.1  | I, [2013-03-13T18:24:56.885680 #18793]  INFO -- : master process ready
+</span><span class="string">18:24:56 web.1  | I, [2013-03-13T18:24:56.886145 #18795]  INFO -- : worker=0 spawned pid=18795
+</span><span class="string">18:24:56 web.1  | I, [2013-03-13T18:24:56.886272 #18795]  INFO -- : Refreshing Gem list
+</span><span class="string">18:24:57 web.1  | I, [2013-03-13T18:24:57.647574 #18795]  INFO -- : worker=0 ready
+</span></pre></div>
+</div>
+
+
+<p>Looks good, so press <code>Ctrl+C</code> to exit and you can deploy your changes to Heroku:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> git add .
+</span><span class="prompt">$</span><span class="function"> git commit -m "use puma via procfile"
+</span><span class="prompt">$</span><span class="function"> git push heroku master
+</span></pre></div>
+</div>
+
+
+<p>Check <code>ps</code>. You’ll see that the web process uses your new command specifying Puma as the web server.</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> heroku ps
+</span><span class="string">=== web (Standard-1X): bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development} (1)
+</span><span class="string">web.1: starting 2016/09/25 22:02:15 -0500 (~ 2s ago)
+</span></pre></div>
+</div>
+
+
+<p>The logs also reflect that we are now using Puma.</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> heroku logs
+</span></pre></div>
+</div>
+
+
+<h2 id="rails-asset-pipeline"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#rails-asset-pipeline">Rails asset pipeline</a></h2>
+
+<p>There are several options for invoking the <a href="http://guides.rubyonrails.org/asset_pipeline.html">Rails asset pipeline</a> when deploying to Heroku. For general information on the asset pipeline please see the <a href="https://devcenter.heroku.com/articles/rails-asset-pipeline">Rails 3.1+ Asset Pipeline on Heroku Cedar</a> article.</p>
+
+<p>The <code>config.assets.initialize_on_precompile</code> option has been removed is and not needed for Rails 5. Also, any failure in asset compilation will now cause the push to fail. For Rails 5 asset pipeline support see the <a href="https://devcenter.heroku.com/articles/ruby-support#rails-5-x-applications">Ruby Support</a> page.</p>
+
+<h2 id="troubleshooting"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#troubleshooting">Troubleshooting</a></h2>
+
+<p>If you push up your app and it crashes (<code>heroku ps</code> shows state <code>crashed</code>), check your logs to find out what went wrong. Here are some common problems.</p>
+
+<h3 id="runtime-dependencies-on-development-test-gems"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#runtime-dependencies-on-development-test-gems">Runtime dependencies on development/test gems</a></h3>
+
+<p>If you’re missing a gem when you deploy, check your Bundler groups. Heroku builds your app without the <code>development</code> or <code>test</code> groups, and if you app depends on a gem from one of these groups to run, you should move it out of the group.</p>
+
+<p>One common example is using the RSpec tasks in your <code>Rakefile</code>. If you see this in your Heroku deploy:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> heroku run rake -T
+</span><span class="string">Running `bundle exec rake -T` attached to terminal... up, ps.3
+</span><span class="string">rake aborted!
+</span><span class="string">no such file to load -- rspec/core/rake_task
+</span></pre></div>
+</div>
+
+
+<p>Then you’ve hit this problem. First, duplicate the problem locally:</p>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="prompt">$</span><span class="function"> bundle install --without development:test
+</span><span class="string">…
+</span><span class="prompt">$</span><span class="function"> bundle exec rake -T
+</span><span class="string">rake aborted!
+</span><span class="string">no such file to load -- rspec/core/rake_task
+</span></pre></div>
+</div>
+
+
+<p>Now you can fix it by making these Rake tasks conditional on the gem load. For example:</p>
+
+<h3 id="rakefile"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#rakefile">Rakefile</a></h3>
+
+<div class="CodeRay">
+  <div class="code"><pre><span class="keyword">begin</span>
+  require <span class="string"><span class="delimiter">"</span><span class="content">rspec/core/rake_task</span><span class="delimiter">"</span></span>
+  desc <span class="string"><span class="delimiter">"</span><span class="content">Run all examples</span><span class="delimiter">"</span></span>
+  <span class="constant">RSpec</span>::<span class="constant">Core</span>::<span class="constant">RakeTask</span>.new(<span class="symbol">:spec</span>) <span class="keyword">do</span> |t|
+    t.rspec_opts = <span class="string"><span class="delimiter">%w[</span><span class="content">--color</span><span class="delimiter">]</span></span>
+    t.pattern = <span class="string"><span class="delimiter">'</span><span class="content">spec/**/*_spec.rb</span><span class="delimiter">'</span></span>
+  <span class="keyword">end</span>
+<span class="keyword">rescue</span> <span class="constant">LoadError</span>
+<span class="keyword">end</span>
+</pre></div>
+</div>
+
+
+<p>Confirm it works locally, then push to Heroku.</p>
+
+<h2 id="done"><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#done">Done</a></h2>
+
+<p>You have deployed your first application to Heroku. The next step is to deploy your own application. You can read more about Ruby on Heroku at the <a href="https://devcenter.heroku.com/categories/ruby">Dev Center</a>.</p>
+<div class="article-footer panel">
+<div class="article-tags">
+<span class="icon-tags"></span><a href="https://devcenter.heroku.com/tags/bundler">bundler</a> <a href="https://devcenter.heroku.com/tags/rails">rails</a> <a href="https://devcenter.heroku.com/tags/ruby">ruby</a>
+</div>
+<div class="nocontent keep-reading" id="keep-reading">
+<h3>
+<span class="icon-book-open"></span><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#keep-reading">Keep reading</a>
+</h3>
+<ul class="list-icons">
+<li>
+<span class="icon-files"></span><a href="https://devcenter.heroku.com/categories/ruby">Ruby</a>
+</li>
+<li>
+<span class="icon-file"></span><a href="https://devcenter.heroku.com/articles/dynos">Dynos and the Dyno Manager</a>
+</li>
+<li>
+<span class="icon-file"></span><a href="https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server">Deploying Rails Applications with the Puma Web Server</a>
+</li>
+<li>
+<span class="icon-files"></span><a href="https://devcenter.heroku.com/categories/command-line">Command Line</a>
+</li>
+</ul>
+</div>
+<div class="article-feedback" id="feedback">
+<h3><a href="https://devcenter.heroku.com/articles/getting-started-with-rails5#feedback"><span class="icon-discussion"></span>Feedback</a></h3>
+<p><a href="https://devcenter.heroku.com/login?back_to=%2Farticles%2Fgetting-started-with-rails5&amp;utm_campaign=login&amp;utm_medium=feedback&amp;utm_source=web">Log in to submit feedback.</a></p>
+</div>
+</div></article></div>
+<div class="pagination">
+<a rel="prev" href="https://devcenter.heroku.com/articles/getting-started-with-rails4">Getting Started with Rails 4.x on Heroku</a><a rel="next" href="https://devcenter.heroku.com/articles/getting-started-with-ruby-o">Getting Started with Ruby on Heroku</a>
+</div>
+</div>
+<footer id="heroku-footer"><div class="wrapper">
+<div class="col heroku-footer-links">
+<nav class="col"><h4>Information &amp; Support</h4>
+<ul>
+<li><a href="https://devcenter.heroku.com/start">Getting Started</a></li>
+<li><a href="https://devcenter.heroku.com/categories/reference">Reference</a></li>
+<li><a href="https://devcenter.heroku.com/categories/learning">Learning</a></li>
+<li><a href="https://devcenter.heroku.com/changelog">Changelog</a></li>
+<li><a href="https://blog.heroku.com/">Blog</a></li>
+<li><a href="https://devcenter.heroku.com/articles/support-channels">Support Channels</a></li>
+<li><a href="https://status.heroku.com/">Status</a></li>
+</ul></nav><nav class="col"><h4>Language Reference</h4>
+<ul>
+<li><a href="https://devcenter.heroku.com/categories/nodejs">Node.js</a></li>
+<li><a href="https://devcenter.heroku.com/categories/ruby">Ruby</a></li>
+<li><a href="https://devcenter.heroku.com/categories/java">Java</a></li>
+<li><a href="https://devcenter.heroku.com/categories/php">PHP</a></li>
+<li><a href="https://devcenter.heroku.com/categories/python">Python</a></li>
+<li><a href="https://devcenter.heroku.com/categories/go">Go</a></li>
+<li><a href="https://devcenter.heroku.com/categories/scala">Scala</a></li>
+<li><a href="https://devcenter.heroku.com/categories/clojure">Clojure</a></li>
+</ul></nav><nav class="col"><h4>Other Resources</h4>
+<ul>
+<li><a href="https://www.heroku.com/careers">Careers</a></li>
+<li><a href="https://elements.heroku.com/">Elements</a></li>
+<li><a href="https://www.heroku.com/products">Products</a></li>
+<li><a href="https://www.heroku.com/pricing">Pricing</a></li>
+</ul></nav>
+</div>
+<div class="col heroku-footer-social">
+<h3>
+<span class="heroku-footer-icon-newsletter"></span>Subscribe to our monthly newsletter</h3>
+<form accept-charset="UTF-8" action="https://www.heroku.com/newsletter_signups" id="bookends-newsletter" method="post">
+<input name="utf8" type="hidden" value="✓"><input id="bookends-website" name="website" placeholder="do not fill this in" tabindex="-1" type="text"><input id="newsletter_signup_email" name="newsletter_signup[email]" placeholder="Your email address" required="required" type="email"><input name="commit" type="submit" value="Go"><p class="hide" id="bookends-newsletter-result"></p>
+</form>
+<ul class="social-list">
+<li class="has-dropdown">
+<a class="heroku-footer-icon-rss" href="http://feeds.feedburner.com/herokudevcenterarticles" target="_blank"> RSS</a><div class="dropdown"><ul>
+<li><a href="http://feeds.feedburner.com/herokudevcenterarticles" target="_blank"><span class="heroku-footer-icon-rss"></span>Dev Center Articles</a></li>
+<li><a href="http://feeds.feedburner.com/herokuchangelog" target="_blank"><span class="heroku-footer-icon-rss"></span>Dev Center Changelog</a></li>
+<li><a href="http://feeds2.feedburner.com/heroku" target="_blank"><span class="heroku-footer-icon-rss"></span>Heroku Blog</a></li>
+<li><a href="https://engineering.heroku.com/feed.xml" target="_blank"><span class="heroku-footer-icon-rss"></span>Engineering Blog</a></li>
+</ul></div>
+</li>
+<li class="has-dropdown">
+<a class="heroku-footer-icon-twitter" href="https://twitter.com/herokudevcenter" target="_blank"> Twitter</a><div class="dropdown"><ul>
+<li><a href="https://twitter.com/herokudevcenter" target="_blank"><span class="heroku-footer-icon-twitter"></span>Dev Center Articles</a></li>
+<li><a href="https://twitter.com/herokuchangelog" target="_blank"><span class="heroku-footer-icon-twitter"></span>Dev Center Changelog</a></li>
+<li><a href="https://twitter.com/heroku" target="_blank"><span class="heroku-footer-icon-twitter"></span>Heroku</a></li>
+<li><a href="https://twitter.com/herokustatus" target="_blank"><span class="heroku-footer-icon-twitter"></span>Heroku Status</a></li>
+</ul></div>
+</li>
+<li><a class="heroku-footer-icon-facebook" href="https://facebook.com/heroku" target="_blank"> Facebook</a></li>
+<li><a class="heroku-footer-icon-instagram" href="https://instagram.com/heroku" target="_blank"> Instagram</a></li>
+<li><a class="heroku-footer-icon-github" href="https://github.com/heroku" target="_blank"> Github</a></li>
+<li><a class="heroku-footer-icon-linkedin" href="https://www.linkedin.com/company/heroku" target="_blank"> LinkedIn</a></li>
+</ul>
+</div>
+</div>
+<div class="tertiary"><div class="wrapper">
+<div class="col"><a class="sfdc-logo" href="https://heroku.com/home" title="heroku.com">Heroku is a<span></span>company</a></div>
+<div class="col">
+<p class="copyright">©<script data-turbolinks-eval="false" type="text/javascript"> document.write(new Date().getFullYear());</script>2016 Salesforce.com</p>
+<ul>
+<li><a href="https://heroku.com/home">heroku.com</a></li>
+<li><a href="https://heroku.com/policy/tos">Terms of Service</a></li>
+<li><a href="https://heroku.com/policy/privacy">Privacy</a></li>
+<li><a href="https://heroku.com/policy/privacy#web_site_navigational_information">Cookies</a></li>
+</ul>
+</div>
+</div></div></footer>
+</div>
+<!-- Google Tag Manager -->
+<noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-JD26" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-JD26');</script>
+<!-- End Google Tag Manager -->
+<script src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/public-9bfcd88c82fc6f61ca087a02543bf7dca56ef3812b3ebb659e4a430ee297a817.js"></script>
+
+<!--[if lt IE 9]>
+<script src="//d3jbcm4ivkrzh.cloudfront.net/assets/public/vendor/selectivizr-1.0.min-5bcdad5ca1fd04e741f38ea80702024cb0b080f9e1763eb8fa4e79b1b6508b79.js"></script>
+<![endif]-->
+
+<script>
+  
+</script>
+
+
+
+
+<script type="text/javascript" id="">piAId="37622";piCId="30300";(function(){function a(){var b=document.createElement("script");b.type="text/javascript";b.src=("https:"==document.location.protocol?"https://pi":"http://cdn")+".pardot.com/pd.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)}window.attachEvent?window.attachEvent("onload",a):window.addEventListener("load",a,!1)})();</script>
+
+<script type="text/javascript" id="">!function(){function f(a){var c=/[?&]?([^=]c)=([^&]*)/;a=c.exec(a)||[];return a=decodeURIComponent(a[2])}function g(a){var c="; "+document.cookie;a=c.split("; "+a+"\x3d");return 2==a.length?a.pop().split(";").shift():void 0}function h(a,c){var b="",b=new Date;b.setTime(b.getTime()+12096E5);b="; expires\x3d"+b.toGMTString();document.cookie=a+"\x3d"+c+b+";domain\x3d.heroku.com;path\x3d/"}var e="campaign",d=g(e);"undefined"==typeof d&&(d=f(document.location.search),"undefined"!==d&&h(e,d))}();</script><script type="text/javascript" id="" src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/js"></script><script type="text/javascript" id="">(function(){var a=function(a){a=new RegExp("[; ]"+a+"\x3d([^\\s;]*)");if(a=(" "+document.cookie).match(a))return unescape(a[1])};if(!a("jbfp")){var c=Math.random().toString(36).substring(2,15)+Math.random().toString(36).substring(2,15);document.cookie="jbfp\x3d"+(new Date).getTime()+"-"+c+";domain\x3dheroku.com;path\x3d/;max-age\x3d31536000"}var c=document.referrer,b=a("jbfp"),d=a("heroku_session"),a=document.createElement("img"),b="https://jambox-p.herokuapp.com/e?url\x3d"+escape(document.location.href)+
+"\x26fp\x3d"+b+"\x26li\x3d"+d;c&&(b+="\x26ref\x3d"+escape(c));a.src=b})();</script><img src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/0" height="0" width="0" style="display: none !important; visibility: hidden;"><img height="1" width="1" style="display: none !important;" alt="" src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/adsct">
+<img height="1" width="1" style="display: none !important;" alt="" src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/adsct(1)"><img height="1" width="1" style="display:none" src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/tr(2)"><iframe src="./Getting Started with Rails 5.x on Heroku _ Heroku Dev Center_files/iframe.html" id="mm_sync_back_ground" style="visibility: hidden; display: none !important;"></iframe></body></html>
